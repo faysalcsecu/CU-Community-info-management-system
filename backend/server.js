@@ -18,7 +18,7 @@ app.use("/uploads", express.static("uploads"))
 const con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '', // Enter your MySQL password here
+  password: '', 
   // port: 3308,
   database: 'cu infosis'
 });
@@ -49,8 +49,7 @@ const upload = multer({ storage: storage });
 
 
 
-// 888888888888888888888888888888888888888888888888888888888888888
-// Dummy user credentials
+
 // Route to handle admin login
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
@@ -65,8 +64,6 @@ app.post('/api/login', (req, res) => {
 
 
 
-// Route to update a student
-// Backend code for updating student information
 
 // Route to update student data
 app.put('/student/:id', upload.single('image'), (req, res) => {
@@ -227,12 +224,6 @@ app.delete('/staff/:id', (req, res) => {
     }
   });
 });
-
-
-
-// 88888888888888888888888888888888888888888888888888888888888888888888888888888888888888
-
-
 
 
 // Route to fetch student data
