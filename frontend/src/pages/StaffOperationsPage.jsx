@@ -12,7 +12,7 @@ function StaffOperationPage() {
     useEffect(() => {
         const fetchAllStaffs = async () => {
             try {
-                const res = await axios.get("http://localhost:3001/staff");
+                const res = await axios.get("http://localhost:3001/staff"); //Now data fetching should work properly
                 setStaffs(res.data);
                 setFilteredStaffs(res.data);
             } catch (err) {
