@@ -1,0 +1,123 @@
+/* welcome.css */
+
+.nav-link {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  background-color: #ffc107;
+  box-shadow: 0 0 20px #ffc107, 0 0 40px #ffc107, 0 0 60px #ffc107;
+}
+
+
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-heading {
+  font-size: 36px;
+  color: #333;
+}
+
+.welcome-text {
+  font-size: 18px;
+  color: #666;
+}
+
+.welcome-image-container {
+  margin-top: 20px;
+}
+
+.welcome-image {
+  max-width: 50%;
+  max-height: 20%;
+  width: auto;
+  height: auto;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+
+
+
+.welcome-content {
+  text-align: center;
+  padding: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.welcome-heading {
+  font-size: 36px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  /* Change the font family */
+  font-weight: bold;
+  /* Make the font bold */
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.welcome-text {
+  font-size: 18px;
+  color: #666;
+  font-family: 'Arial', sans-serif;
+  /* Change the font family */
+  font-weight: bold;
+  /* Make the font bold */
+  animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

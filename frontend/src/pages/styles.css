@@ -1,0 +1,27 @@
+/* .card {
+    background-color: #f8f9fa; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  } */
+
+  .card {
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 1.5rem; /* Larger font size for the title */
+  }
+  
+  .card-text {
+    font-size: 1.1rem; /* Increased font size for text */
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4); /* Gradient background */
+    color: #333; /* Default text color */
+  }
+  
