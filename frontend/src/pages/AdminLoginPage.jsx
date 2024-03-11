@@ -1,7 +1,7 @@
-// AdminLoginPage.jsx
+
 import React, { useState } from 'react';
 import axios from 'axios';
-import './AdminLoginPage.css'; // Import CSS file for styling
+import './AdminLoginPage.css'; 
 
 function AdminLoginPage() {
     const [username, setUsername] = useState('');
@@ -22,7 +22,7 @@ function AdminLoginPage() {
             }
         } catch (error) {
             console.error('Error logging in:', error);
-            setError('An error occurred while logging in');
+            setError('An error occurred while logging in, please try again');
         }
     };
 
@@ -44,5 +44,4 @@ function AdminLoginPage() {
         </div>
     );
 }
-
 export default AdminLoginPage;

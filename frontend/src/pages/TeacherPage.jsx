@@ -3,6 +3,7 @@ import axios from "axios";
 import "./styles.css"; // Import custom CSS file
 import { Link } from "react-router-dom";
 
+
 function TeacherPage() {
   const [teachers, setTeachers] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');

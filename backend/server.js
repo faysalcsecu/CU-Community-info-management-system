@@ -62,8 +62,6 @@ app.post('/api/login', (req, res) => {
 
 
 
-// Route to update a student
-// Backend code for updating student information
 
 // Route to update student data
 app.put('/student/:id', upload.single('image'), (req, res) => {
@@ -224,12 +222,6 @@ app.delete('/staff/:id', (req, res) => {
     }
   });
 });
-
-
-
-// 88888888888888888888888888888888888888888888888888888888888888888888888888888888888888
-
-
 
 
 // Route to fetch student data
