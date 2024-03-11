@@ -1,4 +1,4 @@
-
+//  HERE IS THE WELCOME PAGE 
 
 import React from 'react';
 import './welcome.css'; // Import CSS file for styling
@@ -21,3 +21,5 @@ function WelcomePage() {
 }
 
 export default WelcomePage;
+
+
