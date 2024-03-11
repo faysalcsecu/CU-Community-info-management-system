@@ -32,7 +32,7 @@ Edit the `server.js` file to set up your database connection and other settings.
 Credits :
 
 - Author: @Faysal Bin Alauddin, @Md Arman , @Jannatul Maoua Saima , and @Muhd Rifat Uddin 
-- Third-party libraries: University Of Chittagong Offical Website
+- Third-party libraries: University Of Chittagong Official Website
 
 Contact :
 
