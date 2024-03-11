@@ -70,30 +70,7 @@ function StudentOperationPage() {
             // Handle error (e.g., show an error message)
         }
     };
-    // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-    // const handleUpdateStudent = async (updatedStudent) => {
-    //     try {
-    //         const response = await fetch(`http://localhost:3001/student/${updatedStudent.ST_ID}`, {
-    //             method: 'PUT',
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify(updatedStudent)
-    //         });
-    //         if (response.ok) {
-    //             console.log('Student updated successfully');
-    //             alert('Student updated successfully'); // Show success message
-    //             // Optionally, update the state or fetch updated student data
-    //         } else {
-    //             console.error('Failed to update student');
-    //             alert('Failed to update student'); // Show error message
-    //         }
-    //     } catch (error) {
-    //         console.error('Error updating student:', error);
-    //         alert('Error updating student'); // Show error message
-    //     }
-    // };
-
+   
 
 
 
