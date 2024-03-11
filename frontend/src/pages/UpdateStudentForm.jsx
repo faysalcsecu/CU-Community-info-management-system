@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 
 // function UpdateStudentForm({ studentId, onClose }) {
 function UpdateStudentForm({ onClose }) {
-    
+   
 
     const { studentId } = useParams(); // Get studentId from URL parameters
 
