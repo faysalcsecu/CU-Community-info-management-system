@@ -18,8 +18,7 @@ app.use("/uploads", express.static("uploads"))
 const con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '', // Enter your MySQL password here
-  // port: 3308,
+  password: '', 
   database: 'cu infosis'
 });
 
@@ -50,12 +49,10 @@ const upload = multer({ storage: storage });
 
 
 // 888888888888888888888888888888888888888888888888888888888888888
-// Dummy user credentials
-// Route to handle admin login
+
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
 
-  // Check if username and password are correct
   if ((username === 'faysal' && password === '1234') || (username === 'rifat' && password === '1234') || (username === 'saima' && password === '1234') || (username === 'arman' && password === '1234') ) {
     res.json({ success: true });
   } else {
@@ -237,12 +234,7 @@ app.delete('/staff/:id', (req, res) => {
 
 // Route to fetch student data
 app.get('/student', (req, res) => {
-  // const query = 'SELECT * FROM student_table';
-  // const query = `
-  //   SELECT *
-  //   FROM student_table s
-  //   INNER JOIN department_table d ON s.Dept_ID = d.Dept_ID
-  // `;
+  
   const query = `
   SELECT *, f.Fac_Name
   FROM student_table s
@@ -280,25 +272,6 @@ app.post('/register/student', upload.single('image'), (req, res) => {
   });
 });
 
-
-
-// app.post('/register/student', (req, res) => {
-
-//   const { ST_ID, ST_Name, ST_Gmail, ST_Contact, ST_Batch, Dept_ID } = req.body;
-//   const query = `
-//     INSERT INTO student_table (ST_ID, ST_Name, ST_Gmail, ST_Contact, ST_Batch, Dept_ID)
-//     VALUES (?, ?, ?, ?, ?, ?)
-//   `;
-//   const values = [ST_ID, ST_Name, ST_Gmail, ST_Contact, ST_Batch, Dept_ID];
-//   con.query(query, values, (error, results) => {
-//     if (error) {
-//       console.error('Error registering student:', error);
-//       res.status(500).json({ error: 'Internal Server Error' });
-//     } else {
-//       res.json({ message: 'Student registered successfully' });
-//     }
-//   });
-// });
 
 
 // Route to fetch teacher data with department information
