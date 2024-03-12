@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 function Layout({ children }) {
     return (
         <div>
-            <Navbar style={{ background: 'linear-gradient(to right, #ff7e5f, #feb47b)', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }} expand="lg">
+            <Navbar style={{  background:  'linear-gradient(to right, black, blue)', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }} expand="lg">
                 <Navbar.Brand style={{ fontFamily: 'Arial', fontSize: '30px', fontWeight: 'bold', color: '#fff' }} href="#home">University Of Chittagong Info</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

@@ -2,14 +2,18 @@
 
 .nav-link {
   transition: all 0.3s ease;
+  color: aliceblue;
   border-radius: 20px;
   font-family: Arial;
   font-weight: bold;
 }
 
+
+
 .nav-link:hover {
-  background-color: #ffc107;
-  box-shadow: 0 0 20px #ffc107, 0 0 40px #ffc107, 0 0 60px #ffc107;
+  background-color: #721ddb;
+  box-shadow: 0 0 20px #9d9990, 0 0 40px #706a57, 0 0 60px #625f56;
+  /* color: aliceblue; */
 }
 
 
@@ -32,20 +36,20 @@
 
 .welcome-text {
   font-size: 18px;
-  color: #666;
+  color: #0a0a0a;
 }
 
 .welcome-image-container {
   margin-top: 20px;
 }
 
-.welcome-image {
-  max-width: 50%;
-  max-height: 20%;
-  width: auto;
-  height: auto;
+/*.welcome-image {
+  max-width: 30%;
+  max-height: 10%;
+  width: 50px;
+  height: 50px;
   animation: pulse 2s infinite alternate;
-}
+}*/
 
 @keyframes pulse {
   0% {
@@ -68,7 +72,7 @@
 
 .welcome-heading {
   font-size: 36px;
-  color: #333;
+  color: #303030;
   font-family: 'Arial', sans-serif;
   /* Change the font family */
   font-weight: bold;
