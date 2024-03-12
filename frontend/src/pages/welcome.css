@@ -51,15 +51,7 @@
   height: 50px;
   animation: pulse 2s infinite alternate;
 }*/
-=======
-.welcome-image {
-  max-width: 50%;
-  max-height: 20%;
-  width: auto;
-  height: auto;
-  animation: pulse 2s infinite alternate;//Aded the animation part
-}
->>>>>>> f0b886ea36882c123253e949347eb70044b12f05
+
 
 @keyframes pulse {
   0% {
