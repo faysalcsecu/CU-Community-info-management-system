@@ -20,9 +20,20 @@
     width: 100%;
 }
 
+
+
+
+
+
+
+
 .admin-login-input {
     margin-bottom: 10px;
 }
+
+
+
+
 
 .admin-login-input label {
     display: block;
@@ -35,6 +46,11 @@
     border: 1px solid #ccc;
     border-radius: 3px;
 }
+
+
+
+
+
 
 .admin-login-button {
     width: 100%;
