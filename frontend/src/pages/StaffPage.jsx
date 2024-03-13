@@ -4,9 +4,9 @@ import "./styles.css"; // Import custom CSS file
 
 function StaffPage() {
   const [staff, setStaff] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [filteredStaffs, setFilteredStaffs] = useState([]);
-
+  const [selectedDepartment, setSelectedDepartment] = useState("");
 
   useEffect(() => {
     const fetchStaff = async () => {
@@ -23,54 +23,96 @@ function StaffPage() {
   }, []);
 
   useEffect(() => {
-    // Filter students based on search query
-    const filtered = staff.filter(staff1 => {
+    // Filter staff members based on search query and selected department
+    const filtered = staff.filter((staffMember) => {
       // Check if any field contains the search query
-      return Object.values(staff1).some(value => {
-        if (typeof value === 'string') {
+      const matchesSearchQuery = Object.values(staffMember).some((value) => {
+        if (typeof value === "string") {
           return value.toLowerCase().includes(searchQuery.toLowerCase());
         }
         return false;
       });
+      // Check if department matches selected department
+      const matchesDepartment =
+        selectedDepartment === "" ||
+        staffMember.Dept_Name.toLowerCase() ===
+          selectedDepartment.toLowerCase();
+
+      return matchesSearchQuery && matchesDepartment;
     });
     setFilteredStaffs(filtered);
-  }, [searchQuery, staff]);
+  }, [searchQuery, staff, selectedDepartment]);
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
+  };
+
+  const handleDepartmentChange = (e) => {
+    setSelectedDepartment(e.target.value);
   };
 
   return (
     <div className="container">
       <h1 className="my-4 text-center">Staff Information</h1>
       <div className="mb-3">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Search by department, faculty, name, ID, email, contact etc."
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
+        <div className="row">
+          <div className="col-md-6">
+            <select
+              className="form-control"
+              value={selectedDepartment}
+              onChange={handleDepartmentChange}
+            >
+              <option value="">All Departments</option>
+              {Array.from(
+                new Set(staff.map((staffMember) => staffMember.Dept_Name))
+              ).map((department, index) => (
+                <option key={index} value={department}>
+                  {department}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="col-md-6">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search by name, ID, email, contact, position, etc."
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
+          </div>
+        </div>
       </div>
-      <div className="row justify-content-center">
-      {filteredStaffs.length === 0 ? (
+
+      <div className="d-flex flex-wrap justify-content-center">
+        {filteredStaffs.length === 0 ? (
           <div className="col">No staff data available.</div>
         ) : (
           filteredStaffs.map((staffMember) => (
-            <div key={staffMember.STF_ID} className="col-md-4 mb-4">
-              <div className="card">
-                {staffMember.pictureURL && (
-                  <img src={`http://localhost:3001/${staffMember.pictureURL}`} className="card-img-top" alt={staffMember.STF_Name} style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
-                )}
-                <div className="card-body">
-                  <h5 className="card-title text-center">{staffMember.STF_Name}</h5>
-                  {/* <p className="card-text">ID: {staffMember.STF_ID}</p> */}
-                  <p className="card-text text-center">Gmail: {staffMember.STF_Gmail}</p>
-                  <p className="card-text text-center">Contact: {staffMember.STF_Contact}</p>
-                  <p className="card-text text-center">Position: {staffMember.SC_Name}</p>
-                  <p className="card-text text-center">Department: {staffMember.Dept_Name}</p>
-                  <p className="card-text text-center">Faculty: {staffMember.Fac_Name}</p>
-                </div>
+            <div
+              key={staffMember.STF_ID}
+              className="card m-2 bg-light "
+              style={{ height: "auto", width: "20rem" }}
+            >
+              {staffMember.pictureURL && (
+                <img
+                  src={`http://localhost:3001/${staffMember.pictureURL}`}
+                  className="card-img-top rounded-circle mx-auto mt-3"
+                  alt={staffMember.STF_Name}
+                  style={{ width: "200px", height: "200px" }}
+                />
+              )}
+              <div className="card-body text-center">
+                <h5 className="card-title text-center">
+                  {staffMember.STF_Name}
+                </h5>
+                <p className="card-text text-center">
+                  <strong>Gmail:</strong> {staffMember.STF_Gmail} <br />
+                  <strong>Contact:</strong> {staffMember.STF_Contact} <br />
+                  <strong>Position:</strong> {staffMember.SC_Name} <br />
+                  <strong>Department:</strong> {staffMember.Dept_Name} <br />
+                  <strong>Faculty:</strong> {staffMember.Fac_Name} <br />
+                </p>
               </div>
             </div>
           ))

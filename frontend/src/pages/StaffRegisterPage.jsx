@@ -103,7 +103,7 @@ function StaffRegisterPage() {
   };
 
   return (
-    <div className="container">
+    <div className="container mt-5">
       <h1 className="mb-4">Staff Registration</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">

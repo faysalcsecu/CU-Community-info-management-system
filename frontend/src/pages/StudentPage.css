@@ -1,0 +1,17 @@
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  animation: glowing 1.5s infinite alternate;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 0, 255,  0.7);
+  }
+}

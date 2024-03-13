@@ -96,7 +96,8 @@ function StudentRegisterPage() {
   };
 
   return (
-    <div className="container">
+   
+    <div className="container mt-5">
       <h1 className="mb-4">Student Registration</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -171,8 +172,6 @@ function StudentRegisterPage() {
             ))}
           </select>
         </div>
-
-        {/* New input field for selecting image */}
         <div className="mb-3">
           <label className="form-label">Select Image:</label>
           <input
@@ -183,7 +182,6 @@ function StudentRegisterPage() {
             accept="image/*"
           />
         </div>
-
         <button type="submit" className="btn btn-primary">
           Register
         </button>
