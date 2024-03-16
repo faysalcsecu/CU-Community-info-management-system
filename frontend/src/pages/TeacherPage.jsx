@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./styles.css"; // Import custom CSS file
@@ -55,8 +57,8 @@ function TeacherPage() {
     <div className="container">
       <h1 className="my-4 text-center">Teacher Information</h1>
       <div className="mb-3">
-        <div className="row">
-          <div className="col-md-6">
+        <div className="row justify-content-center"> {/* Center align the row */}
+          <div className="col-md-4"> {/* Adjust column width */}
             <select
               className="form-control"
               value={selectedDepartment}
@@ -72,7 +74,7 @@ function TeacherPage() {
               ))}
             </select>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-5"> {/* Adjust column width */}
             <input
               type="text"
               className="form-control"
