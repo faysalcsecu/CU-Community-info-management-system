@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -82,8 +83,8 @@ function StudentPage() {
     <div className="container">
       <h1 className="my-4 text-center">Student Information</h1>
       <div className="mb-3">
-        <div className="row">
-          <div className="col-md-4">
+        <div className="row justify-content-center"> {/* Centering the row */}
+          <div className="col-md-3">
             <select
               className="form-control"
               value={selectedDepartment}
@@ -100,7 +101,7 @@ function StudentPage() {
               ))}
             </select>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-3">
             <select
               className="form-control"
               value={selectedBatch}
@@ -115,7 +116,7 @@ function StudentPage() {
               ))}
             </select>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-3">
             <input
               type="text"
               className="form-control"
