@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./styles.css"; // Import custom CSS file
@@ -55,8 +57,8 @@ function StaffPage() {
     <div className="container">
       <h1 className="my-4 text-center">Staff Information</h1>
       <div className="mb-3">
-        <div className="row">
-          <div className="col-md-6">
+        <div className="row justify-content-center">
+          <div className="col-md-4">
             <select
               className="form-control"
               value={selectedDepartment}
@@ -72,7 +74,7 @@ function StaffPage() {
               ))}
             </select>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-5">
             <input
               type="text"
               className="form-control"
